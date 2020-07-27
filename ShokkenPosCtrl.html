@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>食券ＰＯＳ・制御部</title>
+<link rel="stylesheet" type="text/css" href="./css/ShokkenPosCtrl.css">
+<script type="text/javascript" src="./script/ShokkenPosCmmn.js" ></script>
+<script type="text/javascript" src="./script/ShokkenPosCtrl.js" ></script>
+</head>
+<body id="ShokkenPosCtrl" onload="shokkenPosCtrlLoad();">
+<article>
+<!-- 制御部 -->
+<table id="ctrlTable">
+<tr>
+<td class="tdSelect">
+<select id="selectSalesMode" onChange="selectSalesModeChanged();">
+<option value="1">前売り券</option>
+<option value="2">招待券</option>
+<option value="3" selected>当日券</option>
+</select>
+<td class="tdCtrl">
+<div class="tabCtrl" id="tabCtrl01" onclick="tabCtrlClick(1);">設定</div>
+<td class="tdCtrl">
+<div class="tabCtrl" id="tabCtrl02" onclick="tabCtrlClick(2);">編集</div>
+<td class="tdCtrl">
+<div class="tabCtrl" id="tabCtrl03" onclick="tabCtrlClick(3);">一覧</div>
+<td class="tdCtrl">
+<div class="tabCtrl" id="tabCtrl04" onclick="tabCtrlClick(4);">集計</div>
+<td>
+</table>
+</article>
+</body>
+</html>

@@ -1,0 +1,55 @@
+body#shokkenPosTotal {
+	width:	100%;
+	height: 100%;
+}
+body#shokkenPosTotal article{
+	width:	100%;
+	height: 100%;
+	margin:	0px 0px 0px 0px;
+	padding:	0px 0px 0px 0px;
+	font-size:	14pt;
+}
+h3	{
+	color:	white;
+	font-size:	18pt;
+	text-align:	left;
+	margin-top:	0px;
+	margin-bottom:	0px;
+}
+table#totalDataTable {
+	width:	882px;
+	border-collapse:	collapse;
+	border:	solid 1px black;
+}
+table#totalDataTable th {
+	border:	solid 1px black;
+	background-color:	#80FF80;
+	font-family:	"‚l‚r ƒSƒVƒbƒN", sans-serif;
+}
+table#totalDataTable td {
+	text-align:	right;
+	border:	solid 1px black;
+	background-color:	#FFFFFF;
+	font-family:	"‚l‚r –¾’©",serif;
+}
+table#totalBalanceTable {
+	width:	488px;
+	border-collapse:	collapse;
+	border:	solid 1px black;
+}
+table#totalBalanceTable th {
+	border:	solid 1px black;
+	background-color:	#80FF80;
+	font-family:	"‚l‚r ƒSƒVƒbƒN", sans-serif;
+}
+table#totalBalanceTable td {
+	text-align:	right;
+	border:	solid 1px black;
+	background-color:	#FFFFFF;
+	font-family:	"‚l‚r –¾’©",serif;
+}
+input#dataFileOutputButton {
+	width:	72px;
+	font-size:	20pt;
+	font-family:	"‚l‚r –¾’©",serif;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>食券ＰＯＳ・編集部</title>
+<link rel="stylesheet" type="text/css" href="./css/shokkenposEdit.css">
+<script type="text/javascript" src="./script/ShokkenPosCmmn.js" ></script>
+<script type="text/javascript" src="./script/ShokkenPosEdit.js" ></script>
+</head>
+<body id="ShokkenPosEdit" onload="shokkenPosEditLoad();">
+<article>
+<audio id="taiko01" preload="auto">
+	<source src="./sound/Taiko01.mp3" type="audio/mp3">
+</audio>
+<audio id="taiko05" preload="auto">
+	<source src="./sound/Taiko05.mp3" type="audio/mp3">
+</audio>
+<audio id="taiko00" preload="auto">
+	<source src="./sound/Taiko00.mp3" type="audio/mp3">
+</audio>
+<table id="editTable">
+<tr>
+<th id="editThDateTime" style="width:110px;">日 時:分
+<td id="editTdDateTime" colspan="3">
+	<div class="editTarget" id="editTarget">新規</div>
+<th id="editThPriceSum" style="width:110px;">金額計
+<td id="editTdPriceSum" colspan="3">
+	<div class="priceSum" id="editPriceSum" style="width:288px;"></div>
+<tr>
+<th id="editTh00" style="width:110px;">
+<th id="editTh01" style="width:110px;">
+<th id="editTh02" style="width:110px;">
+<th id="editTh03" style="width:110px;">
+<th id="editTh04" style="width:110px;">
+<th id="editTh05" style="width:110px;">
+<th id="editTh06" style="width:110px;">
+<th id="editTh07" style="width:110px;">
+<tr>
+<td id="editTd00">
+	<div class="editItem" id="editItem00"></div>
+	<div class="editItemButton" id="addItem1Button00" onclick="addItem1ButtonClick(0);">＋１</div>
+	<div class="editItemButton" id="addItem5Button00" onclick="addItem5ButtonClick(0);">＋５</div>
+	<div class="editItemButton" id="clearItem1Button00" onclick="clearItemButtonClick(0);">消去</div>
+<td id="editTd01">
+	<div class="editItem" id="editItem01"></div>
+	<div class="editItemButton" id="addItem1Button01" onclick="addItem1ButtonClick(1);">＋１</div>
+	<div class="editItemButton" id="addItem5Button01" onclick="addItem5ButtonClick(1);">＋５</div>
+	<div class="editItemButton" id="clearItem1Button01" onclick="clearItemButtonClick(1);">消去</div>
+<td id="editTd02">
+	<div class="editItem" id="editItem02"></div>
+	<div class="editItemButton" id="addItem1Button02" onclick="addItem1ButtonClick(2);">＋１</div>
+	<div class="editItemButton" id="addItem5Button02" onclick="addItem5ButtonClick(2);">＋５</div>
+	<div class="editItemButton" id="clearItem1Button02" onclick="clearItemButtonClick(2);">消去</div>
+<td id="editTd03">
+	<div class="editItem" id="editItem03"></div>
+	<div class="editItemButton" id="addItem1Button03" onclick="addItem1ButtonClick(3);">＋１</div>
+	<div class="editItemButton" id="addItem5Button03" onclick="addItem5ButtonClick(3);">＋５</div>
+	<div class="editItemButton" id="clearItem1Button03" onclick="clearItemButtonClick(3);">消去</div>
+<td id="editTd04">
+	<div class="editItem" id="editItem04"></div>
+	<div class="editItemButton" id="addItem1Button04" onclick="addItem1ButtonClick(4);">＋１</div>
+	<div class="editItemButton" id="addItem5Button04" onclick="addItem5ButtonClick(4);">＋５</div>
+	<div class="editItemButton" id="clearItem1Button04" onclick="clearItemButtonClick(4);">消去</div>
+<td id="editTd05">
+	<div class="editItem" id="editItem05"></div>
+	<div class="editItemButton" id="addItem1Button05" onclick="addItem1ButtonClick(5);">＋１</div>
+	<div class="editItemButton" id="addItem5Button05" onclick="addItem5ButtonClick(5);">＋５</div>
+	<div class="editItemButton" id="clearItem1Button05" onclick="clearItemButtonClick(5);">消去</div>
+<td id="editTd06">
+	<div class="editItem" id="editItem06"></div>
+	<div class="editItemButton" id="addItem1Button06" onclick="addItem1ButtonClick(6);">＋１</div>
+	<div class="editItemButton" id="addItem5Button06" onclick="addItem5ButtonClick(6);">＋５</div>
+	<div class="editItemButton" id="clearItem1Button06" onclick="clearItemButtonClick(6);">消去</div>
+<td id="editTd07">
+	<div class="editItem" id="editItem07"></div>
+	<div class="editItemButton" id="addItem1Button07" onclick="addItem1ButtonClick(7);">＋１</div>
+	<div class="editItemButton" id="addItem5Button07" onclick="addItem5ButtonClick(7);">＋５</div>
+	<div class="editItemButton" id="clearItem1Button07" onclick="clearItemButtonClick(7);">消去</div>
+</table>
+<div class="editControlPanel">
+<input type="button" class="editButton" id="enterButton" value="確定" onclick="enterButtonClick();" style="width:80px;"></input> 
+<input type="button" class="editButton" id="deleteButton" value="削除" onclick="deleteButtonClick();" style="width:80px;"></input> 
+<input type="button" class="editButton" id="cancelButton" value="取消" onclick="cancelButtonClick();" style="width:80px;"></input>
+</div>
+</article>
+</body>
+</html>

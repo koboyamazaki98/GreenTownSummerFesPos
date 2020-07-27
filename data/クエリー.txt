@@ -1,0 +1,98 @@
+■売り上げデータ件数：Q_SALES_DATA_COUNT
+PARAMETERS [TARGET_YEAR] Integer, [TARGET_MODE] Integer;
+select count(*) as DATA_COUNT
+from T_SALES_DATA
+where SALES_YEAR=[TARGET_YEAR] and SALES_MODE=[TARGET_MODE];
+
+■売り上げデータ行番号：Q_SALES_DATA_ROWNO
+select
+	TARGET_YEAR, TARGET_MODE, TARGET_DATE, TARGET_TIME, 
+	count(*) as ROWNO
+from (
+select 
+	T1.SALES_YEAR as TARGET_YEAR, T1.SALES_MODE as TARGET_MODE, 
+	T1.SALES_DATE as TARGET_DATE, T1.SALES_TIME as TARGET_TIME, 
+	T2.SALES_YEAR as SALES_YEAR, T2.SALES_MODE as SALES_MODE, 
+	T2.SALES_DATE as SALES_DATE, T2.SALES_TIME as SALES_TIME
+from 
+	T_SALES_DATA T1
+	inner join T_SALES_DATA T2 on (
+		T2.SALES_YEAR=T1.SALES_YEAR and 
+		T2.SALES_MODE=T1.SALES_MODE and 
+		(
+			T2.SALES_DATE<T1.SALES_DATE
+			or
+			(T2.SALES_DATE=T1.SALES_DATE and T2.SALES_TIME<T1.SALES_TIME)
+		)
+	)
+)
+group by 
+TARGET_YEAR, TARGET_MODE,  TARGET_DATE, TARGET_TIME;
+
+■売り上げリスト：Q_SALES_DATA_LIST
+PARAMETERS [TARGET_YEAR] Long, [TARGET_MODE] Long, [TARGET_FROM] Long, [TARGET_TO] Long;
+SELECT 
+	Q2.ROWNO, T1.*
+FROM 
+	T_SALES_DATA as T1
+	inner join Q_SALES_DATA_ROWNO as Q2 on (
+		T1.SALES_YEAR=Q2.TARGET_YEAR and T1.SALES_MODE=Q2.TARGET_MODE and 
+		T1.SALES_DATE=Q2.TARGET_DATE and T1.SALES_TIME=Q2.TARGET_TIME
+	)
+where 
+	SALES_YEAR=[TARGET_YEAR] and SALES_MODE=[TARGET_MODE] and
+	[TARGET_FROM]<=Q2.ROWNO and Q2.ROWNO <=[TARGET_TO]
+order by 
+	SALES_DATE, SALES_TIME;
+
+■売り上げデータ：Q_SALES_DATA
+PARAMETERS [TARGET_YEAR] Integer, [TARGET_MODE] Integer, [TARGET_DATE] Integer, [TARGET_TIME] Integer;
+select *
+from T_SALES_DATA
+where SALES_YEAR=[TARGET_YEAR] and SALES_MODE=[TARGET_MODE] and SALES_DATE=[TARGET_DATE] and SALES_TIME=[TARGET_TIME];
+
+
+■売り上げデータ登録：Q_INSERT_SALES_DATA
+PARAMETERS [salesYear] Long, [salesMode] Long, [jobCode] Long, [itemNum01] Long, [itemNum02] Long, [itemNum03] Long, [itemNum04] Long, [itemNum05] Long, [itemNum06] Long, [itemNum07] Long, [itemNum08] Long, [priseSum] Long, [depositSum] Long;
+select insertSalesData([salesYear], [salesMode], [jobCode], [itemNum01], [itemNum02], [itemNum03], [itemNum04], [itemNum05], [itemNum06], [itemNum07], [itemNum08], [priceSum], [depositSum]) AS RESULT;
+
+
+■売り上げデータ更新：Q_UPDATE_SALES_DATA
+PARAMETERS [salesYear] Long, [salesMode] Long, [salesDate] Long, [salesTime] Long, [jobCode] Long, [itemNum01] Long, [itemNum02] Long, [itemNum03] Long, [itemNum04] Long, [itemNum05] Long, [itemNum06] Long, [itemNum07] Long, [itemNum08] Long, [priseSum] Long, [depositSum] Long, [updateYear] Long, [updateDate] Long, [updateTime] Long;
+select updateSalesData([salesYear], [salesMode], [salesDate], [salesTime], [jobCode], [itemNum01], [itemNum02], [itemNum03], [itemNum04], [itemNum05], [itemNum06], [itemNum07], [itemNum08], [priceSum], [depositSum], [updateYear], [updateDate], [updateTime]) AS RESULT;
+
+
+■売り上げデータ削除：Q_DELETE_SALES_DATA
+PARAMETERS [salesYear] Long, [salesMode] Long, [salesDate] Long, [salesTime] Long, [updateYear] Long, [updateDate] Long, [updateTime] Long;
+select deleteSalesData([salesYear], [salesMode], [salesDate], [salesTime], [updateYear], [updateDate], [updateTime]) AS RESULT;
+
+
+■集計（販売集計）：Q_TOTAL_DATA
+select 
+	SALES_YEAR, SALES_MODE, 
+	sum(ITEM_NUM01) as TOTAL_NUM01, 
+	sum(ITEM_NUM02) as TOTAL_NUM02, 
+	sum(ITEM_NUM03) as TOTAL_NUM03, 
+	sum(ITEM_NUM04) as TOTAL_NUM04, 
+	sum(ITEM_NUM05) as TOTAL_NUM05, 
+	sum(ITEM_NUM06) as TOTAL_NUM06, 
+	sum(ITEM_NUM07) as TOTAL_NUM07, 
+	sum(ITEM_NUM08) as TOTAL_NUM08, 
+	sum(PRICE_SUM) as TOTAL_PRICE
+from 
+	T_SALES_DATA 
+where 
+	JOB_CODE=2
+group by
+	SALES_YEAR, SALES_MODE
+order by
+	SALES_YEAR, SALES_MODE;
+
+
+■集計（現金残高）：Q_TOTAL_BALANCE
+select 
+	SALES_YEAR, SALES_MODE, JOB_CODE, 
+	sum(PRICE_SUM) as TOTAL_PRICE, sum(DEPOSIT_SUM) as TOTAL_DEPOSIT
+from T_SALES_DATA
+group by SALES_YEAR, SALES_MODE, JOB_CODE
+order by SALES_YEAR, SALES_MODE, JOB_CODE;

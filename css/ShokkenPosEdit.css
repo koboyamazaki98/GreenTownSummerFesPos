@@ -1,0 +1,83 @@
+body#ShokkenPosEdit article{
+	width:	100%;
+	margin:	0px 0px 0px 0px;
+	padding:	0px 0px 0px 0px;
+	font-size:	20pt;
+}
+table#editTable {
+	width:	912px;
+	margin:	0px 0px 0px 0px;
+	border-collapse:	collapse;
+	border:	none 0px black;
+}
+table#editTable th {
+	color: white;
+	background-color:	#077F07;
+	padding:	0px 0px 0px 0px;
+	border:	solid 1px silver;
+	font-family:	"‚l‚r ƒSƒVƒbƒN", sans-serif;
+}
+table#editTable td {
+	text-align:	center;
+	background-color:	black;
+	color:	while;
+	border:	solid 1px silver;
+	font-family:	"‚l‚r –¾’©",serif;
+}
+table#editTable td#editTdDateTime {
+	text-align:	left;
+}
+table#editTable td#editTdPriceSum {
+	text-align:	right;
+}
+div.editItemButton {
+	width:	88px;
+	height:	36px;
+	border-radius: 8px;
+	margin:	2px 4px 2px 4px;
+	padding:	8px 0px 8px 0px;
+	text-align:	center;
+	background-color:	#FFFF80;
+	border:	outset 2px black;
+	cursor:	pointer;
+}
+div.editControlPanel {
+	width:	912px;
+	height:	46px;
+	margin:	2px auto 2px auto;
+}
+div.editTarget {
+	width:	260px;
+	height:	44px;
+	margin:	2px 4px 2px 4px;
+	background-color:	black;
+	color:	white;
+	font-size:	20pt;
+	font-family:	"‚l‚r ƒSƒVƒbƒN", sans-serif;
+	text-align:	center;
+}
+div.editItem {
+	width:	88px;
+	height:	44px;
+	margin:	2px 4px 2px 4px;
+	background-color:	black;
+	color:	white;
+	font-size:	36pt;
+	font-family:	"‚l‚r ƒSƒVƒbƒN", sans-serif;
+	text-align:	right;
+}
+div.priceSum {
+	width:	240px;
+	height:	64px;
+	margin:	2px 4px 2px 4px;
+	background-color:	black;
+	color:	white;
+	font-size:	42pt;
+	font-family:	"‚l‚r ƒSƒVƒbƒN", sans-serif;
+	text-align:	right;
+}
+input.editButton {
+	width:	72px;
+	font-size:	20pt;
+	font-family:	"‚l‚r –¾’©",serif;
+}

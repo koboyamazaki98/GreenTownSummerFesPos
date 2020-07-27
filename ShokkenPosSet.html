@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>食券ＰＯＳ・設定部</title>
+<link rel="stylesheet" type="text/css" href="./css/shokkenposSet.css">
+<script type="text/javascript" src="./script/ShokkenPosCmmn.js" ></script>
+<script type="text/javascript" src="./script/ShokkenPosSet.js" ></script>
+</head>
+<body id="ShokkenPosSet" onload="shokkenPosSetLoad();">
+<article>
+<table id="setTable">
+<tr class="setTrHead">
+<th id="setThDateTime" style="width:110px;">日 時:分
+<td id="setTdDateTime" colspan="3">
+	<div class="setTarget" id="setTarget">新規</div>
+<th id="setThPriceSum" rowspan="2" style="width:110px;">金額計
+<td id="setTdPriceSum" rowspan="2" colspan="3">
+	<div class="priceSum" id="setPriceSum" style="width:288px;"></div>
+<tr class="setTrHead">
+<th id="setThJobCode" style="width:110px;">業務
+<td id="setTdJobCode" colspan="3">
+	<div class="setJobCode" id="setJobCode">
+		<input type="radio" class="setJobCode" name="radioJobCode" id="radioJobCode1" value="1">釣銭受入</input>
+		<input type="radio" class="setJobCode" name="radioJobCode" id="radioJobCode3" value="3">釣銭預出し</input>
+	</div>
+<tr>
+<th id="setTh00" style="width:110px;">一万円
+<th id="setTh01" style="width:110px;">五千円
+<th id="setTh02" style="width:110px;">千円
+<th id="setTh03" style="width:110px;">五百円
+<th id="setTh04" style="width:110px;">百円
+<th id="setTh05" style="width:110px;">五十円
+<th id="setTh06" style="width:110px;">十円
+<th id="setTh07" style="width:110px;">一円
+<tr>
+<td id="setTd00">
+	<div class="setItem" id="setItem00"></div>
+	<div class="setItemButton" id="addItem1Button00"  onclick="addItemButtonClick(0,  1);">＋１</div>
+	<div class="setItemButton" id="addItem5Button00"  onclick="addItemButtonClick(0,  5);">＋５</div>
+	<div class="setItemButton" id="addItem10Button00" onclick="addItemButtonClick(0, 10);">＋１０</div>
+	<div class="setItemButton" id="addItem50Button00" onclick="addItemButtonClick(0, 50);">＋５０</div>
+	<div class="setItemButton" id="clearItem1Button00" onclick="clearItemButtonClick(0);">消去</div>
+<td id="setTd01">
+	<div class="setItem" id="setItem01"></div>
+	<div class="setItemButton" id="addItem1Button01"  onclick="addItemButtonClick(1,  1);">＋１</div>
+	<div class="setItemButton" id="addItem5Button01"  onclick="addItemButtonClick(1,  5);">＋５</div>
+	<div class="setItemButton" id="addItem10Button01" onclick="addItemButtonClick(1, 10);">＋１０</div>
+	<div class="setItemButton" id="addItem50Button01" onclick="addItemButtonClick(1, 50);">＋５０</div>
+	<div class="setItemButton" id="clearItem1Button01" onclick="clearItemButtonClick(1);">消去</div>
+<td id="setTd02">
+	<div class="setItem" id="setItem02"></div>
+	<div class="setItemButton" id="addItem1Button02"  onclick="addItemButtonClick(2,  1);">＋１</div>
+	<div class="setItemButton" id="addItem5Button02"  onclick="addItemButtonClick(2,  5);">＋５</div>
+	<div class="setItemButton" id="addItem10Button02" onclick="addItemButtonClick(2, 10);">＋１０</div>
+	<div class="setItemButton" id="addItem50Button02" onclick="addItemButtonClick(2, 50);">＋５０</div>
+	<div class="setItemButton" id="clearItem1Button02" onclick="clearItemButtonClick(2);">消去</div>
+<td id="setTd03">
+	<div class="setItem" id="setItem03"></div>
+	<div class="setItemButton" id="addItem1Button03"  onclick="addItemButtonClick(3,  1);">＋１</div>
+	<div class="setItemButton" id="addItem5Button03"  onclick="addItemButtonClick(3,  5);">＋５</div>
+	<div class="setItemButton" id="addItem10Button03" onclick="addItemButtonClick(3, 10);">＋１０</div>
+	<div class="setItemButton" id="addItem50Button03" onclick="addItemButtonClick(3, 50);">＋５０</div>
+	<div class="setItemButton" id="clearItem1Button03" onclick="clearItemButtonClick(3);">消去</div>
+<td id="setTd04">
+	<div class="setItem" id="setItem04"></div>
+	<div class="setItemButton" id="addItem1Button04"  onclick="addItemButtonClick(4,  1);">＋１</div>
+	<div class="setItemButton" id="addItem5Button04"  onclick="addItemButtonClick(4,  5);">＋５</div>
+	<div class="setItemButton" id="addItem10Button04" onclick="addItemButtonClick(4, 10);">＋１０</div>
+	<div class="setItemButton" id="addItem50Button04" onclick="addItemButtonClick(4, 50);">＋５０</div>
+	<div class="setItemButton" id="clearItem1Button04" onclick="clearItemButtonClick(4);">消去</div>
+<td id="setTd05">
+	<div class="setItem" id="setItem05"></div>
+	<div class="setItemButton" id="addItem1Button05"  onclick="addItemButtonClick(5,  1);">＋１</div>
+	<div class="setItemButton" id="addItem5Button05"  onclick="addItemButtonClick(5,  5);">＋５</div>
+	<div class="setItemButton" id="addItem10Button05" onclick="addItemButtonClick(5, 10);">＋１０</div>
+	<div class="setItemButton" id="addItem50Button05" onclick="addItemButtonClick(5, 50);">＋５０</div>
+	<div class="setItemButton" id="clearItem1Button05" onclick="clearItemButtonClick(5);">消去</div>
+<td id="setTd06">
+	<div class="setItem" id="setItem06"></div>
+	<div class="setItemButton" id="addItem1Button06"  onclick="addItemButtonClick(6,  1);">＋１</div>
+	<div class="setItemButton" id="addItem5Button06"  onclick="addItemButtonClick(6,  5);">＋５</div>
+	<div class="setItemButton" id="addItem10Button06" onclick="addItemButtonClick(6, 10);">＋１０</div>
+	<div class="setItemButton" id="addItem50Button06" onclick="addItemButtonClick(6, 50);">＋５０</div>
+	<div class="setItemButton" id="clearItem1Button06" onclick="clearItemButtonClick(6);">消去</div>
+<td id="setTd07">
+	<div class="setItem" id="setItem07"></div>
+	<div class="setItemButton" id="addItem1Button07"  onclick="addItemButtonClick(7,  1);">＋１</div>
+	<div class="setItemButton" id="addItem5Button07"  onclick="addItemButtonClick(7,  5);">＋５</div>
+	<div class="setItemButton" id="addItem10Button07" onclick="addItemButtonClick(7, 10);">＋１０</div>
+	<div class="setItemButton" id="addItem50Button07" onclick="addItemButtonClick(7, 50);">＋５０</div>
+	<div class="setItemButton" id="clearItem1Button07" onclick="clearItemButtonClick(7);">消去</div>
+</table>
+<div class="setControlPanel">
+<input type="button" class="setButton" id="enterButton" value="確定" onclick="enterButtonClick();" style="width:80px;"></input> 
+<input type="button" class="setButton" id="deleteButton" value="削除" onclick="deleteButtonClick();" style="width:80px;"></input> 
+<input type="button" class="setButton" id="cancelButton" value="取消" onclick="cancelButtonClick();" style="width:80px;"></input>
+</div>
+</article>
+</body>
+</html>

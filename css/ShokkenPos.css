@@ -1,0 +1,103 @@
+body#ShokkenPos {
+	background-color:	black;
+}
+body#ShokkenPos header{
+	width:	924px;
+	margin:	0px auto 0px auto;
+	background-color:	black;
+}
+h1	{
+	background-color:	#077F07;
+	color:	white;
+	font-size:	24pt;
+	text-align:	center;
+	margin-top:	0px;
+	margin-bottom:	0px;
+}
+body#ShokkenPos article{
+	width:	924px;
+	margin:	0px auto 0px auto;
+	padding:	0px 0px 0px 0px;
+	background-color:	black;
+	color:	#F8F8F8;
+	font-size:	24pt;
+	font-family:	"‚l‚r –¾’©",serif;
+}
+div#leftPanel {
+	position:	absolute;
+	left:	-120px;
+	top:	0px;
+	width:	120px;
+	height:	460px;
+}
+div#rightPanel {
+	width:	120px;
+	height:	460px;
+}
+div#ctrlPanel {
+	width:	100%;
+	height:	48px;
+}
+iframe#ctrlFrame {
+	width:	100%;
+	height:	46px;
+	padding:	0px 0px 0px 0px;
+	border:	none 0px #000000;
+	overflow:	hidden;
+}
+div#setPanel {
+	width:	100%;
+	height:	462px;
+	padding:	0px 0px 0px 0px;
+	overflow:	hidden;
+}
+iframe#setFrame {
+	width:	100%;
+	height:	460px;
+	padding:	0px 0px 0px 0px;
+	overflow:	hidden;
+	border:	none 0px black;
+}
+div#editPanel {
+	width:	100%;
+	height:	442px;
+	padding:	0px 0px 0px 0px;
+	overflow:	hidden;
+}
+iframe#editFrame {
+	width:	100%;
+	height:	440px;
+	padding:	0px 0px 0px 0px;
+	overflow:	hidden;
+	border:	none 0px black;
+}
+div#listPanel {
+	border:	solid 1px silver;
+	width:	100%;
+	height:	462px;
+	padding:	0px 0px 0px 0px;
+	overflow:	hidden;
+}
+iframe#listFrame {
+	width:	100%;
+	height:	460px;
+}
+div#totalPanel {
+	border:	solid 1px silver;
+	width:	100%;
+	height:	462px;
+	padding:	0px 0px 0px 0px;
+	overflow:	hidden;
+}
+iframe#totalFrame {
+	width:	100%;
+	height:	460px;
+}
+input {
+	font-size:	14pt;
+	font-family:	"‚l‚r –¾’©",serif;
+}
+select {
+	font-size:	14pt;
+	font-family:	"‚l‚r –¾’©",serif;
+}

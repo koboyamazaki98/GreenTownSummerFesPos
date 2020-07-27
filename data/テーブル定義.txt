@@ -1,0 +1,24 @@
+■ODBC
+	データソース名：	GTSummerFestaSalesData
+
+■売り上げ：T_SALES_DATA
+	PrimaryKey{
+		年    		SALES_YEAR
+		モード		SALES_MODE	1:前売り、2:招待、3:当日
+		販売日付	SALES_DATE
+		販売時刻	SALES_TIME
+	}
+	業務コード	JOB_CODE	1:釣銭受入、2:販売、3:釣銭預出
+	個数01	ITEM_NUM01
+	個数02	ITEM_NUM02
+	個数03	ITEM_NUM03
+	個数04	ITEM_NUM04
+	個数05	ITEM_NUM05
+	個数06	ITEM_NUM06
+	個数07	ITEM_NUM07
+	個数08	ITEM_NUM08
+	金額計	PRICE_SUM
+	預出計	DEPOSIT_SUM
+	更新年		UPDATE_YEAR
+	更新日付	UPDATE_DATE
+	更新時刻	UPDATE_TIME

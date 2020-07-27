@@ -1,0 +1,94 @@
+body#ShokkenPosSet article{
+	width:	100%;
+	margin:	0px 0px 0px 0px;
+	padding:	0px 0px 0px 0px;
+	font-size:	20pt;
+}
+table#setTable {
+	width:	912px;
+	margin:	0px 0px 0px 0px;
+	border-collapse:	collapse;
+	border:	none 0px black;
+}
+table#setTable th {
+	color: white;
+	background-color:	#077F07;
+	padding:	0px 0px 0px 0px;
+	border:	solid 1px silver;
+	font-family:	"ÇlÇr ÉSÉVÉbÉN", sans-serif;
+}
+table#setTable td {
+	text-align:	center;
+	background-color:	black;
+	color:	while;
+	border:	solid 1px silver;
+	font-family:	"ÇlÇr ñæí©",serif;
+}
+table#setTable td#setTdDateTime {
+	text-align:	left;
+}
+table#setTable td#setTdPriceSum {
+	text-align:	right;
+}
+div.setItemButton {
+	width:	88px;
+	height:	40px;
+	border-radius: 8px;
+	margin:	2px 4px 2px 4px;
+	text-align:	center;
+	vertical-align:	middle;
+	background-color:	#FFFF80;
+	border:	outset 2px black;
+	cursor:	pointer;
+}
+div.setControlPanel {
+	width:	912px;
+	height:	46px;
+}
+div.setTarget {
+	width:	100%;
+	height:	28px;
+	margin:	2px 0px 2px 0px;
+	background-color:	black;
+	color:	white;
+	font-size:	20pt;
+	font-family:	"ÇlÇr ÉSÉVÉbÉN", sans-serif;
+	text-align:	center;
+	vertical-align:	middle;
+}
+div.setJobCode {
+	width:	100%;
+	height:	28px;
+	margin:	2px 0px 2px 0px;
+	background-color:	black;
+	color:	white;
+	font-size:	20pt;
+	font-family:	"ÇlÇr ÉSÉVÉbÉN", sans-serif;
+	text-align:	center;
+	vertical-align:	middle;
+}
+div.setItem {
+	width:	88px;
+	height:	44px;
+	margin:	2px 4px 2px 4px;
+	background-color:	black;
+	color:	white;
+	font-size:	36pt;
+	font-family:	"ÇlÇr ÉSÉVÉbÉN", sans-serif;
+	text-align:	right;
+}
+div.priceSum {
+	width:	240px;
+	height:	64px;
+	margin:	2px 4px 2px 4px;
+	background-color:	black;
+	color:	white;
+	font-size:	42pt;
+	font-family:	"ÇlÇr ÉSÉVÉbÉN", sans-serif;
+	text-align:	right;
+}
+input.setButton {
+	width:	72px;
+	font-size:	20pt;
+	font-family:	"ÇlÇr ñæí©",serif;
+}

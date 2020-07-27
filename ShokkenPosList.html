@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>食券ＰＯＳ・一覧部</title>
+<link rel="stylesheet" type="text/css" href="./css/ShokkenPosList.css">
+<script type="text/javascript" src="./script/ShokkenPosCmmn.js" ></script>
+<script type="text/javascript" src="./script/ShokkenPosList.js" ></script>
+</head>
+<body id="shokkenPosList" onload="shokkenPosListLoad();">
+<article>
+<div class="PageControl" id="pageControl">
+<table id="pageControl">
+<tr>
+<td id="pageFirst" onclick="selectListPage(PAGE_CONTROL_FIRST);">｜＜
+<td id="pagePrev" onclick="selectListPage(PAGE_CONTROL_PREV);">＜
+<td id="pageNum">1 / 4
+<td id="pageNext" onclick="selectListPage(PAGE_CONTROL_NEXT);">＞
+<td id="pageLast" onclick="selectListPage(PAGE_CONTROL_LAST);">＞｜
+</table>
+</div>
+<table id="listTable">
+<tr>
+<th id="listThDateTime" style="width:70px;">時分
+<th id="listTh00" style="width:82px;">
+<th id="listTh01" style="width:82px;">
+<th id="listTh02" style="width:82px;">
+<th id="listTh03" style="width:82px;">
+<th id="listTh04" style="width:82px;">
+<th id="listTh05" style="width:82px;">
+<th id="listTh06" style="width:82px;">
+<th id="listTh07" style="width:82px;">
+<th id="listThPriceSum" style="width:92px;">金額計
+</table>
+</article>
+</body>
+</html>

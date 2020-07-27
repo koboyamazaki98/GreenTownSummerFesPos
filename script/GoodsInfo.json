@@ -1,0 +1,72 @@
+/* 商品設定情報 */
+var goodsInfo={
+	/* データパス */
+	"dbDataPath":
+		/* VersaPro用 */
+		//"C:\\Users\\Public\\Documents\\201808_グリーンタウン_夏まつり\\食券POS\\data\\ShokkenPos.mdb",
+		/* エンデバー用 */
+		"D:\\13_Project\\201908_グリーンタウン_夏まつり\\食券POS\\data\\ShokkenPos_20190825.mdb",
+		/* ASUS TransBookMini用 */
+		//"C:\\Users\\guest00\\Documents\\03_Project\\201908_グリーンタウン_夏まつり\\食券POS\\data\\ShokkenPos_20190825.mdb",
+
+	/* 年次情報 */
+	"goodYear":2019,
+
+	/* 商品数 */
+	"goodNum":8,
+
+	/* 商品 */
+	"goodNames":[
+		"やきそば", 
+		"フランク", 
+		"枝豆", 
+		"ポプコン", 
+		"かき氷", 
+		"お茶", 
+		"ジュース", 
+		"ビール"
+	],
+
+	/* 価格 */
+	"goodPrises": [
+		{
+			"salesMode":1, 
+			"prises":[
+				220,
+				90,
+				90,
+				90,
+				50,
+				100,
+				100,
+				190
+			]
+		}, 
+		{
+			"salesMode":2, 
+			"prises":[
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			]
+		}, 
+		{
+			"salesMode":3, 
+			"prises":[
+				250,
+				100,
+				100,
+				100,
+				50,
+				100,
+				100,
+				200
+			]
+		}
+	]
+};

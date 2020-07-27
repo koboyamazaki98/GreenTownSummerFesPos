@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>食券ＰＯＳ</title>
+<link rel="stylesheet" type="text/css" href="./css/ShokkenPos.css">
+<script type="text/javascript" src="./script/SalesData.js" ></script>
+<script type="text/javascript" src="./script/GoodsInfo.json" ></script>
+<script type="text/javascript" src="./script/ShokkenPosCmmn.js" ></script>
+<script type="text/javascript" src="./script/ShokkenPos.js" ></script>
+</head>
+<body id="ShokkenPos" onload="shokkenPosLoad();">
+<header>
+<h1>食券ＰＯＳ</h1>
+</header>
+<article>
+<!-- 左翼部
+<div id="leftPanel">
+<img src="./image/firework02.gif">
+</div>
+ -->
+
+<!-- 制御部 -->
+<div id="ctrlPanel">
+<iframe id="ctrlFrame" src="./ShokkenPosCtrl.html">
+</iframe>
+</div>
+
+<!-- 設定部 -->
+<div id="setPanel" style="display:none;">
+<iframe id="setFrame" src="./ShokkenPosSet.html">
+</iframe>
+</div>
+
+<!-- 編集部 -->
+<div id="editPanel" style="display:none;">
+<iframe id="editFrame" src="./ShokkenPosEdit.html">
+</iframe>
+</div>
+
+<!-- 一覧部 -->
+<div id="listPanel" style="display:none;">
+<iframe id="listFrame" src="./ShokkenPosList.html">
+</iframe>
+</div>
+
+<!-- 集計部 -->
+<div id="totalPanel" style="display:none;">
+<iframe id="totalFrame" src="./ShokkenPosTotal.html">
+</iframe>
+</div>
+
+</article>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>食券ＰＯＳ・集計部</title>
+<link rel="stylesheet" type="text/css" href="./css/ShokkenPosTotal.css">
+<script type="text/javascript" src="./script/ShokkenPosCmmn.js" ></script>
+<script type="text/javascript" src="./script/ShokkenPosTotal.js" ></script>
+</head>
+<body id="shokkenPosTotal" onload="shokkenPosTotalLoad();">
+<article>
+<h3>■販売集計</h3>
+<table id="totalDataTable">
+<tr>
+<th id="totalDataThJobName" style="width:64px;">業務
+<th id="totalDataTh00" style="width:82px;">
+<th id="totalDataTh01" style="width:82px;">
+<th id="totalDataTh02" style="width:82px;">
+<th id="totalDataTh03" style="width:82px;">
+<th id="totalDataTh04" style="width:82px;">
+<th id="totalDataTh05" style="width:82px;">
+<th id="totalDataTh06" style="width:82px;">
+<th id="totalDataTh07" style="width:82px;">
+<th id="totalDataThPriceSum" style="width:92px;">金額計
+<tr>
+<td style="text-align:center;">前売
+<td id="totalItem0101">100
+<td id="totalItem0102">
+<td id="totalItem0103">
+<td id="totalItem0104">
+<td id="totalItem0105">
+<td id="totalItem0106">
+<td id="totalItem0107">
+<td id="totalItem0108">
+<td id="totalPrice01">
+<tr>
+<td style="text-align:center;">招待
+<td id="totalItem0201">
+<td id="totalItem0202">
+<td id="totalItem0203">
+<td id="totalItem0204">
+<td id="totalItem0205">
+<td id="totalItem0206">
+<td id="totalItem0207">
+<td id="totalItem0208">
+<td id="totalPrice02">
+<tr>
+<td style="text-align:center;">当日
+<td id="totalItem0301">
+<td id="totalItem0302">
+<td id="totalItem0303">
+<td id="totalItem0304">
+<td id="totalItem0305">
+<td id="totalItem0306">
+<td id="totalItem0307">
+<td id="totalItem0308">
+<td id="totalPrice03">
+</table>
+<br>
+<h3>■現金残高</h3>
+<table id="totalBalanceTable">
+<tr>
+<th style="width:120px;">釣銭受入
+<th style="width:120px;">売り上げ
+<th style="width:120px;">釣銭預出し
+<th style="width:120px;">現金残高
+<tr>
+<td id="totalBalanceIn">
+<td id="totalBalanceSales">
+<td id="totalBalanceOut">
+<td id="totalBalanceSum">
+</table>
+<br>
+<h3>■データファイル出力</h3>
+<input type="button" id="dataFileOutputButton" value="出力" onclick="downloadCSV();" />
+</article>
+</body>
+</html>
